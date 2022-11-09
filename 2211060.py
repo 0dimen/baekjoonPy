@@ -9,4 +9,3 @@ def writeStar(N):
 
 if __name__ == '__main__':
     writeStar(int(input()))
-
