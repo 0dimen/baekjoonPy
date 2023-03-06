@@ -6,9 +6,56 @@
 입력값 : [N]
     - N : N번째
 '''
-SUBTITLE = '666'
+
+'''
+시도 1
+ '666'이 포함된 타이틀이 생성되는 규칙을 10000번째까지 찾는다.
+10000번째 까지는 총 4개의 규칙이 존재했다.
+
+ 찾은 규칙을 적용했으나, 정상적으로 실행되지 않았다.
+규칙을 잘못 적용했거나, 규칙을 잘못 찾은 것이 문제인 것 같다.
+
+ 이 방식은 inputNum의 값이 커질수록 타이틀을 찾기위해서는 알고리즘의 갱신이 필요하다는 점이 문제이다.
+ 그러나 속도가 작성된 알고리즘보다 빠를 것이다.
+ 
+'''
+
+'''
+시도 2
+
+'''
 
 
+
+
+if __name__ == '__main__':
+    inputNum = int(input()) # 찾는 타이틀 번째수
+    SUBTITLE = '666' # 포함 되어야 하는 문자열
+
+    n = 666 # 가장 최근에 찾은 타이틀
+    titleNum = 1 # 현재까지 찾은 타이틀 숫자 번째수
+
+    while titleNum != inputNum: # 찾는 타이틀 순서인지 확인.
+        n += 1
+        if str(n).__contains__(SUBTITLE): # n에 '666'이 포함되어 있는지 확인
+            titleNum += 1
+
+    print(n) # 찾은 타이틀 출력
+
+
+    ''' 시도 2
+    while True:
+        if str(n).__contains__(SUBTITLE):
+            titleNum += 1
+            print(titleNum)
+
+            if titleNum == inputNum: # 찾는 타이틀인지 확인
+                print(n)
+                break
+        n += 1
+    '''
+
+''' 시도 1
 def loop1_1(n):
     share = n // 19
     remainder = n % 19
@@ -82,5 +129,5 @@ if __name__ == '__main__':
 
     print(result)
 
-
+'''
 
